@@ -27,10 +27,6 @@ Desktop Wi-Fi clock made from old Tetris, esp32c6, st7735. There are functions o
 > For the display to work correctly, it is necessary to make changes to the Adafruit_ST7735.cpp file of the Adafruit_ST7735_and_ST7789_Library library. After line 232 you need to add: 
 _colstart = 2;
 _rowstart = 1;
-> The final view should be like this: 
-void Adafruit_ST7735::initR(uint8_t options) {
-commonInit(Rcmd1);
-if (options == INITR_GREENTAB) {
-displayInit(Rcmd2green);
-_colstart = 2;
-_rowstart = 1;
+> The final view should be like this:
+
+![Adafruit_ST7735.cpp](/images/Adafruit_ST7735cpp.png)
