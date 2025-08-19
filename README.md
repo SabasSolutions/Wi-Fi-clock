@@ -11,5 +11,5 @@ Desktop Wi-Fi clock made from old Tetris, esp32c6, st7735. There are functions o
 5. USB Cable
 
 > [!IMPORTANT]
-> AsyncTCP and ESPAsyncWebServer libraries must be installed from the ESP32Async author in Arduino IDE. Also, don't forget to install all the other libraries. It is also necessary to install the ESP32 package from Espressif Systems in the Arduino board manager.
+> The board pins for connecting to the display and buttons can be manually assigned via code, but some pins are responsible for other board features, so it is better not to use them. For connecting the display, the best GPIOs are 2,4,5,6,7 according to Table 2-11.
 
