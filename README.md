@@ -10,6 +10,11 @@ Desktop Wi-Fi clock made from old Tetris, esp32c6, st7735. There are functions o
 4. Wires 30AWG
 5. USB Cable
 
+### Libraries required:
+1. NTPClient from Fabrice Weinberg
+2. Adafruit-GFX-Library
+3. Adafruit-ST7735-Library
+
 ![Clock](/images/coputer1.jpg)
 
 > [!IMPORTANT]
@@ -17,3 +22,15 @@ Desktop Wi-Fi clock made from old Tetris, esp32c6, st7735. There are functions o
 
 ![Table 2-11](/images/table.png)
 ![IO MUX](/images/spi.png)
+
+> [!IMPORTANT]
+> For the display to work correctly, it is necessary to make changes to the Adafruit_ST7735.cpp file of the Adafruit_ST7735_and_ST7789_Library library. After line 232 you need to add: 
+_colstart = 2;
+_rowstart = 1;
+> The final view should be like this: 
+void Adafruit_ST7735::initR(uint8_t options) {
+commonInit(Rcmd1);
+if (options == INITR_GREENTAB) {
+displayInit(Rcmd2green);
+_colstart = 2;
+_rowstart = 1;
