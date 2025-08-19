@@ -15,3 +15,5 @@ Desktop Wi-Fi clock made from old Tetris, esp32c6, st7735. There are functions o
 > [!IMPORTANT]
 > The board pins for connecting to the display and buttons can be manually assigned via code, but some pins are responsible for other board features, so it is better not to use them. For connecting the display, the best GPIOs are 2,4,5,6,7 according to Table 2-11.
 
+![Table 2-11](/images/table.png)
+![IO MUX](/images/spi.png)
